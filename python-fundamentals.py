@@ -49,6 +49,13 @@ print(cheese)
 
 
 
+
+
+
+
+
+
+
 #Primitive Data Types
 
 # Boolean Values - Assesses the truth value of something. It has only two values: True and False (note the uppercase T and F)
@@ -104,6 +111,38 @@ total = 35
 user_val = "26"
 total = total + user_val		# output: TypeError
 total = total + int(user_val)		# total will be 61
+
+# type function
+print(type(2.63))		# output: <class 'float'>
+print(type(new_person))		# output: <class 'dict'>
+
+
+
+# Interate Dictionaries
+my_dict = { "name": "Noelle", "language": "Python" }
+for k in my_dict:
+    print(k)
+# output: name, language
+
+my_dict = { "name": "Noelle", "language": "Python" }
+for k in my_dict:
+    print(my_dict[k])
+# output: Noelle, Python
+
+# another way to iterate through the keys
+for key in capitals.keys():
+     print(key)
+#to iterate through the values
+for val in capitals.values():
+     print(val)
+#to iterate through both keys and values
+for key, val in capitals.items():
+     print(key, " = ", val)
+
+
+
+
+
 
 
 
@@ -182,8 +221,6 @@ else:
     print("Final else statement")
 
 
-
-
 # Loop Control
 
 # Break
@@ -214,3 +251,37 @@ while y > 0:
 else:		# only executes on a clean exit from the while loop (i.e. not a break)
    print("Final else statement")
 # output: 3, 2, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Functions
+# Wait, but what's the difference between a parameter and an argument? These two words get mixed up a lot in programming. 
+# In this example 'name' is a parameter while "Michael", "Anna", and "Eli", are arguments. We define parameters. We pass in arguments into functions.
+def say_hi(name):
+    print("Hi, " + name)
+# invoking the function 3 times, passing in one argument each time
+say_hi('Michael')
+say_hi('Anna')
+say_hi('Eli')
+
+
+# Default Parameters
+def beCheerful(name='', repeat=2):		# set defaults when declaring the parameters
+	print(f"good morning {name}\n" * repeat)
+beCheerful()				# output: good morning (repeated on 2 lines)
+beCheerful("tim")		        # output: good morning tim (repeated on 2 lines)
+beCheerful(name="john")			# output: good morning john (repeated on 2 lines)
+beCheerful(repeat=6)			# output: good morning (repeated on 6 lines)
+beCheerful(name="michael", repeat=5)	# output: good morning michael (repeated on 5 lines)
+# NOTE: argument order doesn't matter if we are explicit when sending in our arguments!
+beCheerful(repeat=3, name="kb")		# output: good morning kb (repeated on 3 lines)
