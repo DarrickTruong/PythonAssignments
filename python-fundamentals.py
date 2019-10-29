@@ -14,7 +14,7 @@ last_name = "Coder"
 age = 27
 print(f"My name is {first_name} {last_name} and I am {age} years old.")
 
-# string.format -- print string with integer in string
+
 first_name = "Zen"
 last_name = "Coder"
 age = 27
@@ -138,6 +138,9 @@ for val in capitals.values():
 #to iterate through both keys and values
 for key, val in capitals.items():
      print(key, " = ", val)
+
+
+
 
 
 
@@ -285,3 +288,18 @@ beCheerful(repeat=6)			# output: good morning (repeated on 6 lines)
 beCheerful(name="michael", repeat=5)	# output: good morning michael (repeated on 5 lines)
 # NOTE: argument order doesn't matter if we are explicit when sending in our arguments!
 beCheerful(repeat=3, name="kb")		# output: good morning kb (repeated on 3 lines)
+
+
+
+
+
+
+
+
+
+
+
+# Python Swap
+# python code below!
+arr = [1,3,5,7]
+arr[0], arr[1] = arr[1], arr[0]
